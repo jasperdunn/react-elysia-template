@@ -1,0 +1,8 @@
+# Shared
+node_modules
+.vscode
+.DS_Store
+
+# Client only
+
+# Server only

@@ -1,0 +1,15 @@
+{
+  "name": "@my-app/mono-repo",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "bun --filter '*' dev"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.8",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1"
+  }
+}
