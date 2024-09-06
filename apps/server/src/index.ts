@@ -1,6 +1,7 @@
 import { Elysia, t, ValidationError } from 'elysia';
 import { cors } from '@elysiajs/cors';
-import { getRandomIntInclusive } from './utils/number';
+
+let magicNumber = 0;
 
 const server = new Elysia()
   .use(
@@ -8,19 +9,30 @@ const server = new Elysia()
       origin: 'http://localhost:5173',
     })
   )
-  .get(
-    '/random-number',
-    ({ query }) => getRandomIntInclusive(query.minimum, query.maximum),
+  .get('/magic-number', () => {
+    return new Promise<{
+      magicNumber: number;
+    }>((resolve) => {
+      setTimeout(() => {
+        resolve({
+          magicNumber,
+        });
+      }, 1000);
+    });
+  })
+  .post(
+    '/magic-number',
+    ({ body }) => {
+      return new Promise<void>((resolve) => {
+        setTimeout(() => {
+          magicNumber = body.magicNumber;
+        }, 1000);
+        resolve();
+      });
+    },
     {
-      beforeHandle: ({ query, set }) => {
-        if (query.minimum > query.maximum) {
-          set.status = 422;
-          throw new Error('minimum should be less than or equal to maximum');
-        }
-      },
-      query: t.Object({
-        minimum: t.Number(),
-        maximum: t.Number(),
+      body: t.Object({
+        magicNumber: t.Number(),
       }),
     }
   )

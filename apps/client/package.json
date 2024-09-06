@@ -11,9 +11,10 @@
   },
   "dependencies": {
     "@elysiajs/eden": "^1.1.3",
+    "@my-app/server": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@my-app/server": "workspace:*"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

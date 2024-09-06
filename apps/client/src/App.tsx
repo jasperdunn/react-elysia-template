@@ -1,26 +1,20 @@
-import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import { server } from './common/server';
 import './App.css';
+import useSWR from 'swr';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { data, mutate, isLoading } = useSWR('magic-number', (key) =>
+    server[key].get().then((res) => res.data ?? undefined)
+  );
 
-  useEffect(() => {
-    async function loadData() {
-      const { data: randomNumber } = await server['random-number'].get({
-        query: {
-          minimum: 0,
-          maximum: 100,
-        },
-      });
+  const magicNumber = data?.magicNumber ?? 0;
 
-      setCount(randomNumber ?? 0);
-    }
-
-    loadData();
-  }, []);
+  async function incrementNumber() {
+    await server['magic-number'].post({ magicNumber: magicNumber + 1 });
+    mutate({ magicNumber: magicNumber + 1 }, true);
+  }
 
   return (
     <>
@@ -34,8 +28,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={incrementNumber}>
+          count is {isLoading ? 'loading...' : magicNumber}
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
