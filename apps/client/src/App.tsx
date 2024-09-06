@@ -9,9 +9,14 @@ function App() {
 
   useEffect(() => {
     async function loadData() {
-      const { data } = await server['random-number'].get();
+      const { data: randomNumber } = await server['random-number'].get({
+        query: {
+          minimum: 0,
+          maximum: 100,
+        },
+      });
 
-      setCount(data ?? 0);
+      setCount(randomNumber ?? 0);
     }
 
     loadData();
