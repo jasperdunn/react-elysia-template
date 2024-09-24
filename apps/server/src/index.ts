@@ -1,4 +1,4 @@
-import { Elysia, t, ValidationError } from 'elysia';
+import { Elysia, t } from 'elysia';
 import { cors } from '@elysiajs/cors';
 
 let magicNumber = 0;

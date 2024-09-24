@@ -3,9 +3,11 @@
 Elysia with Eden allows us to have a fully typed client api.
 Refresh the react page to see the random number change.
 
-## Commands
+## Setup
 
-Install Bun if you haven't already:
+- Bun - https://bun.sh/docs/installation
+
+## Commands
 
 ### Install deps
 
@@ -24,4 +26,10 @@ bun dev
 ```sh
 cd apps/<client | server>
 bun <add | remove> <package-name>
+```
+
+### Build the client and server for production
+
+```sh
+bun build-prod
 ```
