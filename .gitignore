@@ -3,7 +3,7 @@ node_modules
 .vscode
 .DS_Store
 dist
-*.tsbuildinfo
+build_cache
 
 # Client only
 

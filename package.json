@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "dev": "bun --filter '*' dev",
-    "build-prod": "bun --filter '*' build"
+    "build": "bun --filter '*' build"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

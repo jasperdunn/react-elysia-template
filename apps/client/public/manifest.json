@@ -1,0 +1,13 @@
+{
+  "name": "Vite + React + TS",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "./../index.html",
+  "display": "fullscreen",
+  "description": "React Client + Elysia Server template"
+}
