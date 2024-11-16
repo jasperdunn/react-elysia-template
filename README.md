@@ -1,7 +1,9 @@
 # React Client + Elysia Server template
 
-Elysia with Eden allows us to have a fully typed client api.
-Refresh the react page to see the random number change.
+[Elysia](https://elysiajs.com) with [Eden](https://elysiajs.com/eden/overview.html) allows us to have a fully typed client api within [React](https://react.dev).
+This template uses [Biome](https://biomejs.dev) instead of prettier and eslint and `bun` instead of `npm`.
+
+Refresh the page to see the random number persist after clicking the button.
 
 ## Setup
 
