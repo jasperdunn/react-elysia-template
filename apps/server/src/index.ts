@@ -1,5 +1,5 @@
-import { Elysia, t } from 'elysia';
 import { cors } from '@elysiajs/cors';
+import { Elysia, t } from 'elysia';
 
 let magicNumber = 0;
 

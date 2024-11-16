@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["biomejs", "Elysia", "elysiajs"],
+  "cSpell.words": ["biomejs", "Elysia", "elysiajs", "tsbuildinfo"],
   "json.schemas": [
     {
       "fileMatch": ["biome.jsonc"],

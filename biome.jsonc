@@ -73,6 +73,16 @@
           }
         }
       }
+    },
+    {
+      "include": ["apps/server/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
     }
   ]
 }
