@@ -6,7 +6,7 @@ let magicNumber = 0;
 const server = new Elysia()
   .use(
     cors({
-      origin: 'http://localhost:5173',
+      origin: process.env.APP_CLIENT_URL,
     })
   )
   .get('/magic-number', () => {
