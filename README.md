@@ -9,7 +9,7 @@ Refresh the react page to see the random number change.
 
 ## Commands
 
-### Install deps
+### Install deps across both client and server
 
 ```sh
 bun i
@@ -31,5 +31,5 @@ bun <add | remove> <package-name>
 ### Build the client and server for production
 
 ```sh
-bun build-prod
+bun run build
 ```
