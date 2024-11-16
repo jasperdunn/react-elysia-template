@@ -28,7 +28,7 @@ function App(): JSX.Element {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button type="button" onClick={incrementNumber}>
+        <button type="button" onClick={incrementNumber} disabled={isLoading}>
           count is {isLoading ? 'loading...' : magicNumber}
         </button>
         <p>
