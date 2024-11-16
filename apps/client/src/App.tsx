@@ -12,7 +12,7 @@ function App(): JSX.Element {
   const magicNumber = data?.magicNumber ?? 0;
 
   async function incrementNumber(): Promise<void> {
-    await server['magic-number'].post({ magicNumber: magicNumber });
+    await server['magic-number'].post({ magicNumber: magicNumber + 1 });
     mutate({ magicNumber: magicNumber + 1 }, true);
   }
 
