@@ -1,0 +1,12 @@
+{
+  "cSpell.words": ["biomejs", "Elysia", "elysiajs"],
+  "json.schemas": [
+    {
+      "fileMatch": ["biome.jsonc"],
+      "url": "https://biomejs.dev/schemas/1.9.4/schema.json"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  }
+}

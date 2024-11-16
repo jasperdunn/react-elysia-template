@@ -1,0 +1,78 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": []
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true
+  },
+  "json": {
+    "formatter": {
+      "indentStyle": "space",
+      "indentWidth": 2
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "trailingCommas": "es5",
+      "quoteStyle": "single"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "nursery": {
+        "useConsistentCurlyBraces": "error",
+        "useExplicitType": "error"
+      },
+      "suspicious": {
+        "noConsole": "error",
+        "noEvolvingTypes": "error",
+        "useAwait": "error"
+      },
+      "style": {
+        "noInferrableTypes": "error",
+        "noNegationElse": "error",
+        "useCollapsedElseIf": "error",
+        "useConsistentArrayType": {
+          "level": "error",
+          "options": {
+            "syntax": "shorthand"
+          }
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": ["apps/client/**"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            // React specific rules
+            "noRenderReturnValue": "error",
+            "useExhaustiveDependencies": "error",
+            "useHookAtTopLevel": "error"
+          },
+          "nursery": {
+            // React specific rules
+            "useComponentExportOnlyModules": "error"
+          }
+        }
+      }
+    }
+  ]
+}
