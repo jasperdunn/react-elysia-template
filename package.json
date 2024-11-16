@@ -1,16 +1,20 @@
 {
   "name": "@my-app/mono-repo",
   "private": true,
-  "workspaces": [
-    "apps/*"
-  ],
+  "type": "module",
+  "workspaces": ["apps/*"],
   "scripts": {
     "dev": "bun --filter '*' dev",
-    "build": "bun --filter '*' build"
+    "build": "bun --filter '*' build",
+    "test": "bun --filter '*' test",
+    "tsc": "bun --filter '*' tsc",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/bun": "^1.1.8",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "typescript": "^5.5.3"
   }
 }
