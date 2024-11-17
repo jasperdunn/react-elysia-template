@@ -1,17 +1,17 @@
 {
   "name": "@my-app/server",
+  "version": "0.0.0",
   "private": true,
+  "main": "src/index.ts",
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development bun --hot src/index.ts",
     "build": "tsc && bun build src/index.ts --target bun --outdir ./dist",
     "start": "NODE_ENV=production bun dist/index.js",
-    "test": "echo \"Tests are not implemented yet.\"",
-    "tsc": "tsc -b"
+    "test": "echo \"Tests are not implemented yet.\""
   },
   "dependencies": {
     "@elysiajs/cors": "^1.1.1",
     "elysia": "^1.1.12"
-  },
-  "main": "src/index.ts"
+  }
 }

@@ -5,33 +5,24 @@ This template uses [Biome](https://biomejs.dev) instead of prettier and eslint a
 
 Refresh the page to see the random number persist after clicking the button.
 
+## Table of Contents
+
+- [React Client + Elysia Server template](#react-client--elysia-server-template)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+  - [Commands](#commands)
+
 ## Setup
 
 - Bun - https://bun.sh/docs/installation
 
 ## Commands
 
-### Install deps across both client and server
-
-```sh
-bun i
-```
-
-### Start the client and server
-
-```sh
-bun dev
-```
-
-### Add or remove a package
-
-```sh
-cd apps/<client | server>
-bun <add | remove> <package-name>
-```
-
-### Build the client and server for production
-
-```sh
-bun run build
-```
+| Command                             | Description                                              |
+| ----------------------------------- | -------------------------------------------------------- |
+| `bun i`                             | Install deps across all packages                         |
+| `bun dev`                           | Start all packages                                       |
+| `bun <add / remove> <package-name>` | Add or remove a package to the closest package.json file |
+| `bun run build`                     | Build the packages for production                        |
+| `bun tsc`                           | Run type checking on all packages                        |
+| `bun test`                          | Run tests on all packages                                |

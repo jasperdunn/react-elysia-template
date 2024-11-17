@@ -4,11 +4,11 @@
   "type": "module",
   "workspaces": ["apps/*"],
   "scripts": {
-    "dev": "bun --filter '*' dev",
     "build": "bun --filter '*' build",
+    "dev": "bun --filter '*' dev",
+    "prepare": "husky",
     "test": "bun --filter '*' test",
-    "tsc": "bun --filter '*' tsc",
-    "prepare": "husky"
+    "tsc": "tsc -b"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

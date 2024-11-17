@@ -1,9 +1,9 @@
 # Shared
-node_modules
 .DS_Store
-dist
-build_cache
+dist/
+node_modules/
 
 # Client only
+build_cache/
 
 # Server only
