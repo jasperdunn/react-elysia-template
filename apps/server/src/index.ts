@@ -9,26 +9,23 @@ const server = new Elysia()
       origin: process.env.APP_CLIENT_URL,
     })
   )
-  .get('/magic-number', () => {
-    return new Promise<{
-      magicNumber: number;
-    }>((resolve) => {
-      setTimeout(() => {
-        resolve({
-          magicNumber,
-        });
-      }, 1000);
-    });
-  })
+  .get(
+    '/magic-number',
+    () => {
+      return {
+        magicNumber,
+      };
+    },
+    {
+      response: t.Object({
+        magicNumber: t.Number(),
+      }),
+    }
+  )
   .post(
     '/magic-number',
     ({ body }) => {
-      return new Promise<void>((resolve) => {
-        setTimeout(() => {
-          magicNumber = body.magicNumber;
-        }, 1000);
-        resolve();
-      });
+      magicNumber = body.magicNumber;
     },
     {
       body: t.Object({

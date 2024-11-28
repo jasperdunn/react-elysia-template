@@ -35,8 +35,10 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "useConsistentCurlyBraces": "error",
-        "useExplicitType": "error"
+        // re-enable when it supports spaces inside jsx
+        "useConsistentCurlyBraces": "off",
+        // re-enable when it supports not requiring explicit types for arrow functions
+        "useExplicitType": "off"
       },
       "suspicious": {
         "noConsole": "error",
